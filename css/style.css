@@ -9,6 +9,7 @@
 .grow {
 	font-size: 2em;
 }
+
 .page-color {
 	background-color: black;
 }
@@ -37,10 +38,11 @@ div{
 	border-radius: 4px;
 }
 
-.card_image{
+.card_image {
 	width: 100%;
 }
-.bottom_button{
+
+.bottom_button {
 	display: flex;
 	box-sizing:border-box;
 	border-radius: 4px;
@@ -54,32 +56,35 @@ div{
 
 }
 
-.card_bottom{
+.card_bottom {
 	display: flex;
 	flex-flow:column;
 }
-.card_head{
+
+.card_head {
 	flex:0;
 }
-.card_para{
+
+.card_para {
 	flex:1 0 auto;
+	display: none;
 }
 
-#container
-{
-	display: flex;		/* makes container a flexbox*/
+#container {
+	display: flex;			/* makes container a flexbox*/
 	flex-flow: row wrap; 	/* layout the boxes in rows and wrap them*/
 	box-sizing:border-box;
 	margin-right:auto;
 	margin-left:auto;
 	max-width:1050px;	
 }
-#logo{
+
+#logo {
 	width: 800px;
 	margin: auto;
 }
 
-.card{
+.card {
 	flex:1; /* */
 	display: flex;	/* make the contents controllable by flexbox*/
 	flex-flow:column;	/* */
@@ -88,18 +93,19 @@ div{
 	padding: 20px;
 	background-color: #fff;
 }
+
 .highlight_stream{
 	background-color: #EB5255;
 }
 
-#my_footer{
+#my_footer {
 	width:100%;
 	text-align: center;
 }
-#copyright{
+
+#copyright {
 	margin-top:10px;
 	margin-bottom:10px;
-
 }
 
 /*************************
@@ -149,6 +155,7 @@ li{
 .underline{
   text-decoration:underline;
 }
+
 .border{
   border: solid 5px #ccc;
 }
@@ -162,5 +169,11 @@ li{
 	li{
 		font-size: 2em;
 	}
+}
+
+/*----------------------------------------- Challenges -----------*/
+
+.highlight {
+	background-color: #ffff00;
 }
 

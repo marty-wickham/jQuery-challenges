@@ -21,15 +21,15 @@ $(document).ready(function() {
 			$("#par6").slideToggle(1000);
 		});
 	*/
-	$("button").click(function() {
-		$("p").slideToggle(2000)
+	
+	$("button").on("click", function() {     // traversing challenge 1
+		$(this).prev().slideToggle('slow');
 	});
-	$("button").click(function() {
-		$("p").hide(2000).show(2000); 
+	
+	$("img").click(function() {
+		$(this).next().children("p").slideDown();	// traversing challenge 2
 	});
-		$("button").click(function() {
-		$("p").fadeIn().fadeOut(); 
-	});
+
 
 	$("button").mouseenter(function() {
 		$("button").addClass("makeBorder").removeClass("makeRed"); // method chaining 
@@ -102,6 +102,24 @@ $(document).ready(function() {
 		$("body").removeClass("page-color");
 	});
 
+	$(".stream-nav").on("click", function() {
+		var allCards = ".card";
+		var cardSelector = "." + this.id;
+
+		$(allCards).removeClass("highlight_stream");
+		$(cardSelector).addClass("highlight_stream");
+	});
+
+	$('p').on("click", function() {
+		$(this).children('a').addClass("highlight");
+	})
+
+
+});
+
+
+/*
+
 	$("#stream1_btn").click(function() {
 		$(".stream1").removeClass('highlight_stream');
 		$(".stream2").removeClass('highlight_stream');
@@ -120,6 +138,36 @@ $(document).ready(function() {
 		$(".stream3").removeClass('highlight_stream');
 		$(".stream3").addClass('highlight_stream');
 	});
+	
+*/
 
+/*
 
-});
+	$(".card").on("click", function() {
+		var classNames = $(this).attr("class").split(" ");        // changes card background whe you click the card.
+		var cardName = classNames[0];
+		var streamName = classNames[1];
+		
+		if($(this).css("background-color") == "rgb(255, 0, 0)") {
+			$("." + streamName).css("background-color", "#fff");
+		} else {
+			$("." + cardName).css("background-color", "#fff");
+			$("." + streamName).css("background-color", "red");
+		}
+	});
+	
+*/
+
+/*
+	
+		$("button").click(function() {
+		$("p").slideToggle(2000)
+	});
+	$("button").click(function() {
+		$("p").hide(2000).show(2000); 
+	});
+		$("button").click(function() {
+		$("p").fadeIn().fadeOut(); 
+	});
+	
+*/
