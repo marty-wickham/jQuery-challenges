@@ -173,7 +173,16 @@ li{
 
 /*----------------------------------------- Challenges -----------*/
 
+.stream-nav{
+	cursor: pointer;
+}
+
 .highlight {
 	background-color: #ffff00;
 }
+
+.card-bg {
+	background-color: pink;
+}
+
 

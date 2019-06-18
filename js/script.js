@@ -21,22 +21,37 @@ $(document).ready(function() {
 			$("#par6").slideToggle(1000);
 		});
 	*/
-	
-	$("button").on("click", function() {     // traversing challenge 1
+
+	$("button").on("click", function() { // traversing challenge 1
 		$(this).prev().slideToggle('slow');
 	});
-	
+
 	$("img").click(function() {
-		$(this).next().children("p").slideDown();	// traversing challenge 2
+		$(this).next().children("p").slideDown(); // traversing challenge 2
 	});
 
-
-	$("button").mouseenter(function() {
-		$("button").addClass("makeBorder").removeClass("makeRed"); // method chaining 
+	$(".card").click(function() {
+		$(this).toggleClass("card-bg"); // traversing challenge 3
 	});
 
-	$("button").mouseleave(function() {
-		$("button").removeClass("makeBorder").addClass("makeRed");
+	$('p').on("click", function() {
+		$(this).children('a').addClass("highlight"); // challenge
+	})
+
+	$(".stream").on("click", function() {
+		var allCards = ".card";
+		var cardSelector = "." + this.id;
+
+		$(allCards).removeClass("highlight_stream");
+		$(cardSelector).addClass("highlight_stream");
+	});
+
+	$("#select").click(function() {
+		$(".card:not(.highlight)").hide();
+	});
+	
+	$("#all").click(function() {
+		$(".card").show();	
 	});
 
 
@@ -102,21 +117,20 @@ $(document).ready(function() {
 		$("body").removeClass("page-color");
 	});
 
-	$(".stream-nav").on("click", function() {
-		var allCards = ".card";
-		var cardSelector = "." + this.id;
-
-		$(allCards).removeClass("highlight_stream");
-		$(cardSelector).addClass("highlight_stream");
-	});
-
-	$('p').on("click", function() {
-		$(this).children('a').addClass("highlight");
-	})
-
 
 });
 
+/*
+
+	$("button").mouseenter(function() {
+		$("button").addClass("makeBorder").removeClass("makeRed"); // method chaining 
+	});
+
+	$("button").mouseleave(function() {
+		$("button").removeClass("makeBorder").addClass("makeRed");
+	});
+	
+*/
 
 /*
 
